@@ -1,0 +1,11 @@
+
+.drop { filter: drop-shadow(0 5px 10px rgba(255, 255, 255, 0.5)); }
+.img-fluid { max-width: 100%; height: auto; }
+
+.zoom {
+  transition: transform .2s; 
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}

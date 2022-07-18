@@ -1,0 +1,179 @@
+{
+  "classRoom": [
+    {
+      "id": 1,
+      "name": "SISTEMA BMP3",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "login",
+      "time": "40",
+      "img": "../../assets/classroom/bmp3.png"
+    },
+    {
+      "id": 2,
+      "name": "SISTEMA BTR80A",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "30",
+      "img": "../../assets/classroom/btr80.png"
+    },
+    {
+      "id": 3,
+      "name": "SISTEMA T72",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "45",
+      "img": "../../assets/classroom/t72.png"
+    },
+    {
+      "id": 4,
+      "name": "FUSIL AK-103",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "50",
+      "img": "../../assets/classroom/ak103.png"
+    },
+    {
+      "id": 5,
+      "name": "FUSIL DRAGUNOV",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "80",
+      "img": "../../assets/classroom/dragunov.png"
+    },
+    {
+      "id": 6,
+      "name": "PISTOLA 9MM",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "70",
+      "img": "../../assets/classroom/9mm.png"
+    },
+    {
+      "id": 8,
+      "name": "SISTEMA RPG",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 0,
+      "url": "prueba",
+      "time": "40",
+      "img": "../../assets/classroom/rpg7.png"
+    },
+    {
+      "id": 9,
+      "name": "SISTEMA IGLA-S",
+      "title": "Vehiculo Blindado de Transporte de Personal",
+      "status": 1,
+      "url": "prueba",
+      "time": "50",
+      "img": "../../assets/classroom/iglas.png"
+    },
+    {
+      "id": 10,
+      "name": "SISTEMA MGL",
+      "title": "Lanza granadas",
+      "status": 1,
+      "url": "prueba",
+      "time": "50",
+      "img": "../../assets/classroom/mgl.png"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "username": "instructor",
+      "password": "instructor",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "username": "alumno",
+      "password": "alumno",
+      "status": 1
+    }
+  ],
+  "itemClassRoom": [
+    {
+      "idClassRoom": 1,
+      "id": 1,
+      "name": "Presentación",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 15,
+      "name": "Introducción",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 11,
+      "name": "Clase A",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 12,
+      "name": "CLASE B",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 2,
+      "id": 2,
+      "name": "Clase #2",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 1,
+      "name": "Presentación",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 15,
+      "name": "Introducción",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 11,
+      "name": "Clase A",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 1,
+      "id": 12,
+      "name": "CLASE B",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 2,
+      "id": 2,
+      "name": "Clase #2",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 2,
+      "id": 3,
+      "name": "Clase #3",
+      "description": "Descr"
+    },
+    {
+      "idClassRoom": 3,
+      "id": 4,
+      "name": "Clase #4",
+      "description": "Descr"
+    }
+  ]
+}
