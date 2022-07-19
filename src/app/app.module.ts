@@ -10,11 +10,13 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './components/app/app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
-import { ClassRoomItemComponent } from './class-room-item/class-room-item.component';
-import { ClassRoomPageComponent } from './class-room-page/class-room-page.component';
-import { NewsComponent } from './contents/shared/news/news.component';
-import { AuthGuardGuard } from './services/seguridad/auth-guard.guard';
-import { AuthInterceptorService } from './services/seguridad/auth-interceptor.service';
+import { AuthGuardGuard } from '@core/services/seguridad/auth-guard.guard';
+import { AuthInterceptorService } from '@core/services/seguridad/auth-interceptor.service';
+import { UsersComponent } from './users/users.component';
+import { EvaluationsComponent } from './evaluations/evaluations.component';
+import { CertificatesComponent } from './certificates/certificates.component';
+import { ClassRoomComponent } from './class-room/class-room/class-room.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
@@ -31,9 +33,11 @@ import { AuthInterceptorService } from './services/seguridad/auth-interceptor.se
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
-    ClassRoomItemComponent,
-    ClassRoomPageComponent,
-    NewsComponent,
+    UsersComponent,
+    EvaluationsComponent,
+    CertificatesComponent,
+    ClassRoomComponent,
+    RegisterComponent
   ],
   providers: [
     {

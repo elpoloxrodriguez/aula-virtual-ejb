@@ -19,6 +19,7 @@
         </div>
       </span>
     </form>
+    
     <!-- <ul class="nav navbar-nav nav-mobile-menu">
         <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)">
@@ -53,12 +54,19 @@
             </a>
         </li>
     </ul> -->
+    
   </div>
     <ul class="nav">
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
             <a class="nav-link" [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
                 <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li class="'active-pro nav-item" (click)="salir()">
+            <a class="nav-link" >
+                <i class="material-icons">unarchive</i>
+                <p>Salir</p>
             </a>
         </li>
     </ul>

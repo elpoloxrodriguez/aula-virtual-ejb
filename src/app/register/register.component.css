@@ -1,0 +1,13 @@
+#fondo {
+    background: radial-gradient(circle at top left,  #0C7295, #4dbd74);
+    /* background: radial-gradient(circle at top left,  #fafd51, #0056a1, #fd0303); */
+    height: 100%;
+    width: 100%;
+}
+
+.bajar {
+    margin: 100px auto;
+}
+
+.drop { filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.5)); }
+.img-fluid { max-width: 100%; height: auto; }

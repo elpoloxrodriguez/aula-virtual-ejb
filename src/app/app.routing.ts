@@ -4,7 +4,8 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { ClassRoomItemComponent } from './class-room-item/class-room-item.component';
+import { RegisterModule } from './register/register.module';
+import  { UsersModule } from './users/users.module';
 
 const routes: Routes =[
   {
@@ -25,6 +26,8 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
+    RegisterModule,
+    UsersModule,
     RouterModule.forRoot(routes,{
        useHash: true
     })

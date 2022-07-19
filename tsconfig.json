@@ -16,7 +16,12 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@core": ["@core/"],
+      "@assets": ["assets/"],
+      "environments": ["environments/"]
+    }
   },
   "files": [
     "src/main.ts",

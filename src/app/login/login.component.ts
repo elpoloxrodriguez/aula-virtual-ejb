@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IToken, LoginService } from '../services/seguridad/login.service';
-import { ClassroomService } from '../services/classroom.service';
+import { IToken, LoginService } from '@core/services/seguridad/login.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -23,7 +22,7 @@ export class LoginComponent implements OnInit {
   public itk: IToken;
   private index: number = 0;
 
-  constructor(private classroomsSrv: ClassroomService,
+  constructor(
      private route: Router,
      private loginService: LoginService, 
      ) { 
@@ -35,75 +34,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   
   }
-
-
-  // login() {
-  //   let user = {
-  //     username: this.username, password: this.password
-  //   }
-  //   this.classroomsSrv.Login(user).subscribe(
-  //     (data) => { // Success
-  //       let res = data.filter(
-  //         (el: any) => {
-  //           return el.username === user.username && el.password === user.password
-  //         })
-  //       if (res.length > 0) {
-  //         const Toast = Swal.mixin({
-  //           toast: true,
-  //           position: 'top-end',
-  //           showConfirmButton: false,
-  //           timer: 3000,
-  //           timerProgressBar: true,
-  //           didOpen: (toast) => {
-  //             toast.addEventListener('mouseenter', Swal.stopTimer)
-  //             toast.addEventListener('mouseleave', Swal.resumeTimer)
-  //           }
-  //         })
-  //         Toast.fire({
-  //           icon: 'success',
-  //           title: 'Bienvenidos ✅'
-  //         })
-
-  //         this.route.navigate(['/dashboard'])
-  //       } else {
-  //         const Toast = Swal.mixin({
-  //           toast: true,
-  //           position: 'top-end',
-  //           showConfirmButton: false,
-  //           timer: 3000,
-  //           timerProgressBar: true,
-  //           didOpen: (toast) => {
-  //             toast.addEventListener('mouseenter', Swal.stopTimer)
-  //             toast.addEventListener('mouseleave', Swal.resumeTimer)
-  //           }
-  //         })
-  //         Toast.fire({
-  //           icon: 'error',
-  //           title: 'Datos incorrectos ❌'
-  //         })
-  //       }
-  //     },
-  //     (error) => {
-  //       // console.log(error);
-  //       const Toast = Swal.mixin({
-  //         toast: true,
-  //         position: 'top-end',
-  //         showConfirmButton: false,
-  //         timer: 3000,
-  //         timerProgressBar: true,
-  //         didOpen: (toast) => {
-  //           toast.addEventListener('mouseenter', Swal.stopTimer)
-  //           toast.addEventListener('mouseleave', Swal.resumeTimer)
-  //         }
-  //       })
-  //       Toast.fire({
-  //         icon: 'error',
-  //         title: 'Algo salio mal!'
-  //       })
-  //     }
-  //   );
-  // }
-
 
   async login(){   
     // console.log(this.usuario, this.clave) 

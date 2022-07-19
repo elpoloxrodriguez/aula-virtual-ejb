@@ -65,7 +65,7 @@
                           <input matInput autocomplete="off" name="clave" [(ngModel)]="clave" value="{{clave}}" [ngModelOptions]="{standalone: true}" required type="password" placeholder="Ingrese Constraseña">
                         </mat-form-field>
                   </div>
-                  <div class="row">
+                  <div class="row" align="center">
                     <div class="col-3">
                       <button type="button" class="btn btn-info px-4"
                             fullWidth
@@ -73,6 +73,12 @@
                             size="medium"
                             (click)="login()"
                             >Iniciar</button>
+                    </div>
+                    &nbsp;
+                    <div class="col-3">
+                      <a routerLink="register" class="btn btn-success px-4">
+                        Registrar
+                      </a>
                     </div>
                     <div class="col-9 text-right">
                       <!-- <button type="button" class="btn btn-link px-0">¿Recuperar Clave?</button> -->

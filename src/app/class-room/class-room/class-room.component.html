@@ -1,0 +1,103 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title ">Lista de Evaluaciones</h4>
+                        <p class="card-category"> Diferentes Sistemas de Armas del Ejército Bolivariano</p>
+                    </div>
+                    <br>
+    
+              <div class="card-content table-responsive table-full-width">
+                <div class="container">
+                
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="container">
+                                    <button class="btn btn-sm btn-outline-primary" (click)="open(content)">Agregar Aula</button>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="container">
+                            
+                                <mat-form-field>
+                                    <input matInput type="text" placeholder="Buscar..." [ngModelOptions]="{standalone: true}"
+                                    [(ngModel)]="buscar" value="{{buscar}}" (keypress)="seleccionLista($event)">
+                                  </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  <div class="mat-elevation-z8">
+                    
+                    <div class="container">
+                        <div class="row">
+                    <div class="col-md-4" *ngFor="let item of SearchClassRoom">
+                        <div class="card card-chart">
+                            <a [routerLink]="['/class-room-item', r(item) ]">
+                            <div class="card-header card-header-{{item.status === '1' ? 'success' : 'danger'}}">
+                                <div align="center">
+                                    <img src="{{ 'assets/classroom/'+item.img ? 'assets/classroom/'+item.img : 'assets/logos/cacfr.png' }}"
+                                        class="drop img-fluid zoom" style="width: 180px; height: 180px; border-radius:110px;
+                                    margin-left: auto;
+                                    margin-right: auto;">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title"><strong>{{ item.name }}</strong></h4>
+                                <p class="card-category">
+                                {{ item.title }}
+                                </p>
+                            </div>
+                        </a>
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <i class="material-icons">access_time</i> {{ item.time }} Horas de
+                                    instrucción
+                                </div>
+                                <div align="rigth">
+                                    <i class="material-icons" (click)="alertWithSuccess(item)">edit</i>
+                                    &nbsp;
+                                    <i class="material-icons" (click)="ClassRoomDelete(item)">delete</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+              </div>
+
+                 <!-- Row shown when there is no matching data. -->
+                 <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No hay datos que coincidan con la búsqueda: "{{input.value}}"</td>
+                  </tr>
+                  
+                    <mat-paginator [length]="longitud" (page)="pageChangeEvent($event)" [pageSize]="pageSize"
+                  [pageSizeOptions]="pageSizeOptions" (page)="pageEvent = $event" aria-label="Seleccionar">
+                </mat-paginator>
+                  </div>
+                  <br>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Hello, World!</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>

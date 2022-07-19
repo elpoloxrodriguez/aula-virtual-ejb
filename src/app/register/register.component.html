@@ -1,0 +1,99 @@
+
+<div class="app-body" id="fondo">
+    <main class="main d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mx-auto bajar">
+            <div class="card-group">
+            
+                    <div class="card">
+                        <div class="card-header card-header-success">
+                            <h4 class="card-title">Datos Personales del Alumno</h4>
+                            <p class="card-category">Complete el formulario para ingresar al sistema</p>
+                        </div>
+                        <div class="card-body">
+                          <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                      <mat-form-field class="example-full-width">
+                                        <mat-select [(ngModel)]="selectedValue" name="grado" placeholder="Seleccione Grado y/o Jerarquia">
+                                          <mat-option *ngFor="let grado of grados" [value]="grado.value">
+                                          {{ grado.name }}
+                                          </mat-option>
+                                        </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="example-full-width">
+                                          <input matInput placeholder="Cedula de Identidad">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field class="example-full-width">
+                                          <input matInput placeholder="Usuario">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Nombres" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Apellidos" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Correo Electronico" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Telefono" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Contraseña" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Confirmar Contraseña" type="text">
+                                      </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <label>Descripcion</label>
+                                      <mat-form-field class="example-full-width">
+                                         <textarea matInput placeholder="Descripcion de la Unidad y/o Dependencia"></textarea>
+                                       </mat-form-field>
+
+                                    </div>
+                                </div>
+                                <button mat-raised-button type="submit" class="btn btn-success pull-right">Registrarme</button>
+                                <a mat-raised-button type="submit" class="btn btn-danger pull-right" routerLink="/">Regresar</a>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </main>
+  
+  </div>
+  
