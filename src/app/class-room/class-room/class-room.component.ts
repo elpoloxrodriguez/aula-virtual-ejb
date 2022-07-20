@@ -88,7 +88,7 @@ export class ClassRoomComponent implements OnInit {
     this.xAPI.funcion = 'AU_ClassRoom'
     this.xAPI.parametros = ''
     this.xAPI.valores = ''    
-    this.apiService.Ejecutar(this.xAPI)
+    // this.apiService.Ejecutar(this.xAPI)
     await this.apiService.Ejecutar(this.xAPI).subscribe(
       (data) => {
         data.Cuerpo.forEach(e => {

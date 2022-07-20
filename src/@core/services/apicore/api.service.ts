@@ -75,6 +75,14 @@ export class ApiService {
     return this.http.post<any>(url, xAPI, this.httpOptions);
   }
 
+    //Ejecutar Api generales
+    EjecutarDevel(xAPI : IAPICore) : Observable<any>{
+      // return this.http.post<any>(this.URL + "crud" + this.hash, xAPI, this.httpOptions);
+      var url = "/devel/crud" + this.hash
+      //console.info( JSON.stringify(xAPI ))
+      return this.http.post<any>(url, xAPI, this.httpOptions);
+    }
+
    //EnviarArchivos generales
    EnviarArchivos(frm : FormData ) : Observable<any>{
     var httpOptions = {
