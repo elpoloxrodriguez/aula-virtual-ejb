@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService, IAPICore } from '@core/services/apicore/api.service';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -19,19 +20,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 
 export class RegisterComponent implements OnInit {
-
-  hide = true;
-  hidePassword = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  phone = new FormControl('', [Validators.required]);
-  identificationCard =  new FormControl('', [Validators.required]);
-  name1 =  new FormControl('', [Validators.required]);
-  surname1 =  new FormControl('', [Validators.required]);
-  hierarchy =  new FormControl('', [Validators.required]);
-  password =  new FormControl('', [Validators.required]);
-  confirmPassword =  new FormControl('', [Validators.required]);
-  description =  new FormControl('', [Validators.required]);
-  matcher = new MyErrorStateMatcher();
   
   public  AU_C_Persons = [{
     id : 213,
@@ -51,8 +39,26 @@ export class RegisterComponent implements OnInit {
   selectedValue: string;
   items
   checkoutForm;
+  groud;
+  user;
+
+  valor1 = ''
 
   nameSpinner = false
+
+
+  hide = true;
+  hidePassword = true;
+  matcher = new MyErrorStateMatcher()
+  email = new FormControl('', [Validators.required, Validators.email])
+  phone = new FormControl('', [Validators.required])
+  identificationCard =  new FormControl('', [Validators.required])
+  name1 =  new FormControl('', [Validators.required])
+  surname1 =  new FormControl('', [Validators.required])
+  hierarchy =  new FormControl('', [Validators.required])
+  password =  new FormControl('', [Validators.required])
+  confirmPassword =  new FormControl('', [Validators.required])
+  description =  new FormControl('', [Validators.required])
   
   grados = [
     {value: 'G/J', name: 'General en Jefe'},

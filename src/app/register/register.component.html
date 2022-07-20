@@ -13,7 +13,7 @@
                         </div>
                         <div class="card-body">
                           <div class="card-body">
-                            <form [formGroup]="checkoutForm" class="example-form" (ngSubmit)="onSubmit(checkoutForm.value)">
+                            <form [formGroup]="checkoutForm" novalidate  class="example-form" (ngSubmit)="onSubmit(checkoutForm.value)">
                                 <div class="row">
                                     <div class="col-md-6">
                                       <mat-form-field class="example-full-width">
@@ -27,8 +27,8 @@
                                     <div class="col-md-6">
                                         <mat-form-field class="example-full-width" appearance="fill">
                                           <mat-label>Cedula</mat-label>
-                                          <input type="number" matInput [formControl]="identificationCard" [errorStateMatcher]="matcher"
-                                                 placeholder="Ex. alumno@example.com">
+                                          <input type="number" [(ngModel)]="valor1" matInput [formControl]="identificationCard" [errorStateMatcher]="matcher"
+                                                 placeholder="Ingrese cedula de identidad Ex: 12345678" autocomplete="off">
                                           <mat-error *ngIf="identificationCard.hasError('email') && !identificationCard.hasError('required')">
                                             Por favor, introduce un numero telefonico valido
                                           </mat-error>
@@ -38,12 +38,13 @@
                                         </mat-form-field>
                                     </div>
                                 </div>
+                                {{ valor1}}
                                 <div class="row">
                                     <div class="col-md-6">
                                       <mat-form-field class="example-full-width" appearance="fill">
                                         <mat-label>Primer Nombre</mat-label>
                                         <input type="text" matInput [formControl]="name1" [errorStateMatcher]="matcher"
-                                               placeholder="Ingrese primer nombre">
+                                               placeholder="Ingrese primer nombre" autocomplete="off">
                                         <mat-error *ngIf="name1.hasError('email') && !name1.hasError('required')">
                                           Por favor, introduce un numero telefonico valido
                                         </mat-error>
@@ -63,7 +64,7 @@
                                     <mat-form-field class="example-full-width" appearance="fill">
                                       <mat-label>Primer Apellido</mat-label>
                                       <input type="text" matInput [formControl]="surname1" [errorStateMatcher]="matcher"
-                                             placeholder="Ingrese primer apellido">
+                                             placeholder="Ingrese primer apellido" autocomplete="off">
                                       <mat-error *ngIf="surname1.hasError('email') && !surname1.hasError('required')">
                                         Por favor, introduce un numero telefonico valido
                                       </mat-error>
@@ -74,7 +75,7 @@
                                   </div>
                                   <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Segundo Apellido" type="text" formControlName="surname2">
+                                      <input matInput placeholder="Segundo Apellido" autocomplete="off" type="text" formControlName="surname2">
                                     </mat-form-field>
                                   </div>
                               </div>
@@ -83,7 +84,7 @@
                                       <mat-form-field class="example-full-width" appearance="fill">
                                         <mat-label>Email</mat-label>
                                         <input type="email" matInput [formControl]="email" [errorStateMatcher]="matcher"
-                                               placeholder="Ex. alumno@example.com">
+                                               placeholder="Ex. alumno@example.com" autocomplete="off">
                                         <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
                                           Por favor, introduce una dirección de correo electrónico válida
                                         </mat-error>
@@ -96,7 +97,7 @@
                                       <mat-form-field class="example-full-width" appearance="fill">
                                         <mat-label>Telefono</mat-label>
                                         <input type="number" matInput [formControl]="phone" [errorStateMatcher]="matcher"
-                                               placeholder="Ex. alumno@example.com">
+                                               placeholder="Ingrese numero telefonico" autocomplete="off">
                                         <mat-error *ngIf="phone.hasError('email') && !phone.hasError('required')">
                                           Por favor, introduce un numero telefonico valido
                                         </mat-error>
@@ -111,7 +112,7 @@
                                       <mat-form-field class="example-full-width" appearance="fill">
                                         <mat-label>Constraseña</mat-label>
                                         <input [type]="hidePassword ? 'password' : 'text'" matInput [formControl]="password" [errorStateMatcher]="matcher"
-                                               placeholder="Ingrese primer apellido">
+                                               placeholder="Ingrese primer apellido" autocomplete="off">
                                                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
                                                 <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
                                               </button>
@@ -127,7 +128,7 @@
                                       <mat-form-field class="example-full-width" appearance="fill">
                                         <mat-label>Confirmar Constraseña</mat-label>
                                         <input [type]="hide ? 'password' : 'text'" matInput [formControl]="confirmPassword" [errorStateMatcher]="matcher"
-                                               placeholder="Ingrese primer apellido">
+                                               placeholder="Ingrese primer apellido" autocomplete="off">
                                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                                               </button>
@@ -138,13 +139,6 @@
                                           El campo es <strong>requerido</strong>
                                         </mat-error>
                                       </mat-form-field>
-                                      <!-- <mat-form-field appearance="fill">
-                                        <mat-label>Confirmar Contraseña</mat-label>
-                                        <input matInput [type]="hide ? 'password' : 'text'">
-                                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                        </button>
-                                      </mat-form-field> -->
                                     </div>
                                 </div>
                                 <div class="row">
