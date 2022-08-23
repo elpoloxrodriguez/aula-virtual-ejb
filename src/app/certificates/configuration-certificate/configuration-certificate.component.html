@@ -1,0 +1,97 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title "><strong>Panel de configuración para los certificados</strong></h4>
+                        <p class="card-category"> Diferentes Sistemas de Armas del Ejército Bolivariano</p>
+                    </div>
+                    <br>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                      <form [formGroup]="checkoutForm" (ngSubmit)="probarPDF(checkoutForm.value)">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label>Formato del Certificado</label>
+                                                    <mat-form-field class="example-full-width">
+                                                    <mat-select [(ngModel)]="selectedFormatos"  formControlName="formato" placeholder="Seleccione Formato">
+                                                        <mat-option *ngFor="let formato of formatos" [value]="formato.value">
+                                                        {{ formato.name }}
+                                                        </mat-option>
+                                                      </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label>Firmas del Certificado</label>
+                                                    <mat-form-field class="example-full-width">
+                                                        <mat-select [(ngModel)]="selectedFirmas"  formControlName="firma" placeholder="Seleccione Cantidad">
+                                                            <mat-option *ngFor="let firma of firmas" [value]="firma.value">
+                                                            {{ firma.name }}
+                                                            </mat-option>
+                                                          </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label>Tipo del Certificado</label>
+                                                    <mat-form-field class="example-full-width">
+                                                        <mat-select [(ngModel)]="selectedTipos" formControlName="hiercdcdsarchy" placeholder="Seleccione Tipo">
+                                                            <mat-option *ngFor="let tipo of tipos" [value]="tipo.value">
+                                                            {{ tipo.name }}
+                                                            </mat-option>
+                                                          </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                  <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Imagen Izquierda" type="file">
+                                                  </mat-form-field>
+                                                </div>
+                                                <div class="col-md-4">
+                                                  <mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="Imagen Derecha" type="file">
+                                                  </mat-form-field>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <mat-form-field class="example-full-width">
+                                                      <input matInput placeholder="Imagen Fondo" type="file">
+                                                    </mat-form-field>
+                                                  </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                  <label>Cabecera</label>
+                                                  <mat-form-field class="example-full-width">
+                                                     <textarea matInput placeholder="Escribe la cabecera de pagina que tendra el certficado y/o diploma" formControlName="head" rows="3"></textarea>
+                                                   </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                  <label>Pie</label>
+                                                  <mat-form-field class="example-full-width">
+                                                     <textarea matInput placeholder="Escribe el pie de pagina que tendra el certficado y/o diploma"  formControlName="footer" rows="3"></textarea>
+                                                   </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <button mat-raised-button type="submit" class="btn btn-success pull-right">Guardar Configuración</button>
+                                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Modificar Configuración</button>
+                                            <a mat-raised-button routerLink="/certificates"  class="btn btn-warning pull-left">Regresar</a>
+                                            <button mat-raised-button type="submit" class="btn btn-primary pull-left">Probar Configuración</button>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

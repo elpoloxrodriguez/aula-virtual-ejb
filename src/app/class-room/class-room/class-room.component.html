@@ -35,7 +35,7 @@
                         <div class="row">
                     <div class="col-md-4" *ngFor="let item of SearchClassRoom">
                         <div class="card card-chart">
-                            <a [routerLink]="['/class-room-item', r(item) ]">
+                            <a [routerLink]="['/class-room/class-room-item/', r(item) ]">
                             <div class="card-header card-header-{{item.status === '1' ? 'success' : 'danger'}}">
                                 <div align="center">
                                     <img src="{{ 'assets/classroom/'+item.img ? 'assets/classroom/'+item.img : 'assets/logos/cacfr.png' }}"

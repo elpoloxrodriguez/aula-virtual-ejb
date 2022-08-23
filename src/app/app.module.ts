@@ -14,9 +14,13 @@ import { AuthGuardGuard } from '@core/services/seguridad/auth-guard.guard';
 import { AuthInterceptorService } from '@core/services/seguridad/auth-interceptor.service';
 import { UsersComponent } from './users/users.component';
 import { EvaluationsComponent } from './evaluations/evaluations.component';
-import { CertificatesComponent } from './certificates/certificates.component';
+import { CertificatesComponent } from './certificates/certificates/certificates.component';
 import { ClassRoomComponent } from './class-room/class-room/class-room.component';
 import { RegisterComponent } from './register/register.component';
+import { ListCertificatesComponent } from './certificates/list-certificates/list-certificates.component';
+import { ConfigurationCertificateComponent } from './certificates/configuration-certificate/configuration-certificate.component';
+import { ClassRoomItemComponent } from './class-room/class-room-item/class-room-item.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 @NgModule({
   imports: [
@@ -37,7 +41,11 @@ import { RegisterComponent } from './register/register.component';
     EvaluationsComponent,
     CertificatesComponent,
     ClassRoomComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListCertificatesComponent,
+    ConfigurationCertificateComponent,
+    ClassRoomItemComponent,
+    AttendanceComponent
   ],
   providers: [
     {
