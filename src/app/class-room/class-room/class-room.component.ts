@@ -96,7 +96,6 @@ export class ClassRoomComponent implements OnInit {
           this.SearchClassRoom = data.Cuerpo
           this.longitud = data.Cuerpo.length
        });
-       console.info(this.ListClassRoom)
       },
       (error) => {
         console.log(error)
